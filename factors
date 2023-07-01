@@ -10,10 +10,10 @@ def factorize(value):
         return
     while True:
         if value % i == 0:
-            print("{:.0f}={:.0f}*{:.0f}".format(value, value / i, i))
+            print("{:d}={:d}*{:.d}".format(value, value // i, i))
             break
         if value % sq == 0:
-            print("{:.0f}={:.0f}*{:.0f}".format(value, value / sq, sq))
+            print("{:d}={:d}*{:d}".format(value, value // sq, sq))
             break
         i += 1
         sq -= 1
