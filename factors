@@ -6,8 +6,6 @@ def factorize(value):
     i = 2
     sq = int(sqrt(value))
 
-    if value < 2:
-        return
     while True:
         if value % i == 0:
             print("{}={}*{}".format(value, value // i, i))
