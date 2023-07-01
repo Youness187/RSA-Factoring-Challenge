@@ -2,12 +2,10 @@
 from sys import argv
 from math import sqrt
 
-def factorize(value):
+def rsa(value):
     i = 2
     sq = int(sqrt(value))
 
-    if value < 2:
-        return
     while True:
         if value % i == 0:
             print("{}={}*{}".format(value, value // i, i))
@@ -18,16 +16,10 @@ def factorize(value):
         i += 1
         sq -= 1
 
-if len(argv) != 2:
-    exit()
-
 try:
     with open(argv[1]) as file:
         line = file.readline()
-
-        while line != "":
-            value = int(line.split('\n')[0])
-            factorize(value)
-            line = file.readline()
+        value = int(line.split('\n')[0])
+        rsa(value)
 except:
     pass
